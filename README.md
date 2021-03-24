@@ -8,20 +8,20 @@ Make sure you have all the needed packages installed
 - Numpy
 - Pytorch
 
-If you have a GPU on your computer, Pytorch might try to use for some computations.
+If you have a GPU on your computer, Pytorch might try to use for some computations.  
 In our code, we did not manage the eventuality that some tensors might be stored in the GPU. Hence, you might find some issues with pytorch if you have a GPU.
-To overcome this, run the command (on a Unix like environment)
-   export CUDA_VISIBLE_DEVICES=""
-to ensure that all computations will be done on the CPU.
+To overcome this, run the command (on a Unix like environment)  
+   export CUDA_VISIBLE_DEVICES=""  
+to ensure that all computations will be done on the CPU.  
 
 
 ## COVERING
 
-This environment is represented by a matrix (zone) of dimensions (n,m) and N drones moving on its cells.
+This environment is represented by a matrix (zone) of dimensions (n,m) and N drones moving on its cells.  
 
-Each cell in the zone is either free, either containing an obstacle, either containing a target (a human)
-The objective of the drones is to cover the zone as fast as possible and find all the targets.
-drones can walk in cells containing targets, but not in cells containing obstacles
+Each cell in the zone is either free, either containing an obstacle, either containing a target (a human)  
+The objective of the drones is to cover the zone as fast as possible and find all the targets.  
+drones can walk in cells containing targets, but not in cells containing obstacles  
 
 For each i in range(n) and j in range(m), we have (i being in the ordinate axis, and j in the abscissa axis)
 - zone[i,j] = 0 iif the cell free
