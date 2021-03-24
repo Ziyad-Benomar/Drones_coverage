@@ -8,8 +8,7 @@ Make sure you have all the needed packages installed
 - Numpy
 - Pytorch
 
-If you have a GPU on your computer, Pytorch might try to use for some computations.  
-In our code, we did not manage the eventuality that some tensors might be stored in the GPU. Hence, you might find some issues with pytorch if you have a GPU.
+In our code, we did not manage the eventuality that some Pytorch tensors might be stored in the GPU. Hence, you might find some issues running our code if you have a GPU.
 To overcome this, run the command (on a Unix like environment)  
    export CUDA_VISIBLE_DEVICES=""  
 to ensure that all computations will be done on the CPU.  
